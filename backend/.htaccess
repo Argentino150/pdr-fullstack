@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+
+   RewriteEngine On
+
+   RewriteCond %{REQUEST_FILENAME}  -f [OR]
+   RewriteCond %{REQUEST_FILENAME} !-f
+   #RewriteRule ^(.*)$ index.php [L,QSA]
+
+   RewriteRule / index.php?pagina=telainicial
+   RewriteRule home index.php?pagina=telainicial
+   RewriteRule login index.php?pagina=login
+   RewriteRule empresa index.php?pagina=cadastroempresa
+   RewriteRule autenticacao index.php?pagina=autenticacao
+   RewriteRule inicialreceptor index.php?pagina=inicialreceptor
+   
+</IfModule>
